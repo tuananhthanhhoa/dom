@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" value="" id="Money">
+    <button type="button" onclick="myPrice()">xem giá</button>
+    <p id="Prices"></p>
+</body>
+
+
+    <script>
+        function myPrice () {
+            let money = document.getElementById('Money');
+            let prices = ''; // có nghĩa là trái cây
+
+            switch (money.value) {
+                case '20000':
+                    prices = 'ổi, dưa hấu';
+                    break;
+                case '30000':
+                    prices = 'táo, xoài';
+                    break;
+                case '40000':
+                    prices = 'cam, chôm chôm';
+                    break;
+                case '50000':
+                    prices = 'măng cụt';
+                    break;
+                default:
+                    prices = 'không có quả nào';
+            }
+            
+            document.getElementById('Prices').innerHTML = prices;
+        }
+    </script>
+</html>
